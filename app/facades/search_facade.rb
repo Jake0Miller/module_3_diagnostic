@@ -1,6 +1,6 @@
 class SearchFacade
   def stations
-    @stations ||= service.station_data#.map {|data| Station.new(data)}
+    @stations ||= service.station_data.map {|data| Station.new(data)}
   end
 
   private
