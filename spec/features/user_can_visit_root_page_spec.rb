@@ -8,7 +8,11 @@ feature "User can visit root page" do
       expect(page).to have_content("AltFuelFinder")
       expect(page).to have_selector("input[value='Search by zip...']")
     end
+  end
 
+  scenario "we can search by zip" do
+    visit "/"
+    
     fill_in :q, with: 80203
 
     click_on "Locate"
