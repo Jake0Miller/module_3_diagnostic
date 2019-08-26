@@ -3,7 +3,11 @@
 <ul class='stations'>
   <% facade.stations.each do |station| %>
     <li class='station'>
-      <% station.name %>
+      <p>Name: <%= station.name %></p>
+      <p>Location: <%= station.address %></p>
+      <p>Fuel Type: <%= station.fuel_type %></p>
+      <p>Distance: <%= station.distance %></p>
+      <p>Access Times: <%= station.access_times %></p>
     </li>
   <% end %>
 </ul>
