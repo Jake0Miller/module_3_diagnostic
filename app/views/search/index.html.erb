@@ -1,5 +1,9 @@
 <h1>Stations</h1>
 
-<% facade.stations.each do |station| %>
-  <% station %>
-<% end %>
+<ul class='stations'>
+  <% facade.stations.each do |station| %>
+    <li class='station'>
+      <% station.name %>
+    </li>
+  <% end %>
+</ul>

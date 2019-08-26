@@ -1,12 +1,12 @@
 class Station
   attr_reader :distance, :fuel_type, :name, :address, :access_times
-  
+
   def initialize(data)
-    @distance = data[:fuel_stations][:distance]
-    @fuel_type = data[:fuel_stations][:fuel_type_code]
-    @name = data[:fuel_stations][:station_name]
-    @address = make_address(data[:fuel_stations])
-    @access_times = data[:fuel_stations][:access_days_time]
+    @distance = data[:distance]
+    @fuel_type = data[:fuel_type_code]
+    @name = data[:station_name]
+    @address = make_address(data)
+    @access_times = data[:access_days_time]
   end
 
   def make_address(data)
